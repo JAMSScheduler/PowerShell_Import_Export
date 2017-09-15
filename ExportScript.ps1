@@ -1,7 +1,7 @@
 #
 # The Folder to export from
 #
-$targetFolder = "Samples\TestFolder"
+$targetFolder = "The JAMS folder path that you are exporting"
 
 #
 # Add the JAMS module
@@ -11,7 +11,7 @@ Import-Module JAMS
 #
 # Set the path of the first export which will just export job names and empty properties
 #
-$firstExportPath = "C:\Users\TimF.MVP\Desktop\SUPPORT\FirstExport.xml"
+$firstExportPath = "Your first directory .xml"
 
 #
 # Get Jobs in the specified Folder recursively
@@ -31,6 +31,6 @@ foreach($obj in $jobList)
        }
 }
 "</Jobs>" | Out-File $firstExportPath -Append utf8
-$secondExportPath = "C:\Users\TimF.MVP\Desktop\SUPPORT\SecondExport.xml"
+$secondExportPath = "Your second directory .xml"
 
 Export-JAMSXml -InputObject $jobList -Path $secondExportPath
